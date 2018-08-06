@@ -29,6 +29,20 @@ $background-opacit: 0.9;
   }
 }
 
+@mixin format-portrait {
+  border-radius: 50%;
+  border: $secondary-color 3px solid;
+}
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 //Media Quary Mixins
 @mixin mediaSm {
   @media screen and (max-width: 500px) {
